@@ -9,7 +9,8 @@ import FrenchKeyboard from './Components/FrenchKeyboard';
 import SpanishKeyboard from './Components/SpanishKeyboard';
 import BangaliKeyboard from './Components/BangaliKeyboard';
 import JarmaniKeyboard from './Components/JarmaniKeyboard';
-
+import { Provider } from "react-redux"
+import store from './Redux/store'
 function App() {
   const [category,setCategory]=useState("English");
   const handleCategoryChange = (category) => {
@@ -18,6 +19,8 @@ function App() {
 }
 
   return (
+    <Provider store={store}>
+    
     <div >
        <select style={{margin:20}} name="category" value={category}  onChange={event => handleCategoryChange(event.target.value)} >
             <option  id="0" >Hindi</option>
@@ -81,6 +84,7 @@ function App() {
         <JarmaniKeyboard/>:<></>
       }
     </div>
+    </Provider>
   )
 }
 
