@@ -48,7 +48,7 @@ width: 778px;
 /*language-dropdown-item-header*/
 
 .language-dropdown-selection-header{
-    font-family: Poppins;
+    font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -80,7 +80,7 @@ color: #000000;
 /*language-dropdown-item-header*/
 
 .font-dropdown-selection-header{
-    font-family: Poppins;
+    font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -110,7 +110,7 @@ color: #000000;
 }
 /*keyboard-main-container*/
 .cancel-icons{
-    font-family: Poppins;
+    font-family: 'Mukta', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -171,7 +171,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -215,7 +215,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -269,7 +269,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -323,7 +323,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -367,7 +367,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -420,7 +420,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -474,7 +474,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -518,7 +518,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 
-    font-family: Poppins;
+font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;

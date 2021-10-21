@@ -12,7 +12,7 @@ function HindiKeyboard() {
     const [pressed, setPressed] = useState(false)
   const [position, setPosition] = useState({x: 0, y: 0})
   const [capsLockEnable,setcapsLockEnable]=useState(false)
-  const [shiftEnable,setshiftEnable]=useState(false)
+  const [controlEnable,setcontrolEnable]=useState(false)
   
   
   const ref = useRef()
@@ -85,82 +85,152 @@ function HindiKeyboard() {
           
             <div className="keyboard-main-container" >
                 <div className="subcontainer1" >
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+''}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                        controlEnable?"-":"ॊ"
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      f
+                      {
+                        controlEnable?"-":"ॊ"
+                      }
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऍ":"1"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"१":"1"}`:`${capsLockEnable?"ऍ":"1"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                       
                       <div  className="key-content" >
-                      {capsLockEnable?"ऍ":"1"}
+                        {
+                          controlEnable?`${controlEnable?"१":"1"}`:`${capsLockEnable?"ऍ":"1"}`
+                        }
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ॅ":"2"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"२":"2"}`:`${capsLockEnable?"ॅ":"2"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      {capsLockEnable?"ॅ":"2"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"२":"2"}`:`${capsLockEnable?"ॅ":"2"}`
+                      }
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"्र":"3"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"३":"3"}`:`${capsLockEnable?"्र":"3"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      {capsLockEnable?"्र":"3"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"३":"3"}`:`${capsLockEnable?"्र":"3"}`
+                      }
+                     
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"र्":"4"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"४":"4"}`:`${capsLockEnable?"र्":"4"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      {capsLockEnable?"र्":"4"}
+                      {
+                          controlEnable?`${controlEnable?"४":"4"}`:`${capsLockEnable?"र्":"4"}`
+                      }
+                     
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ज्ञ":"5"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"५":"5"}`:`${capsLockEnable?"ज्ञ":"5"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"ज्ञ":"5"}
+                      {
+                          controlEnable?`${controlEnable?"५":"5"}`:`${capsLockEnable?"ज्ञ":"5"}`
+                      }
+                     
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"त्र":"6"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
+                      }
+                     `}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"त्र":"6"}
+                      {
+                          controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
+                      }
+                     
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"क्ष":"7"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"७":"7"}`:`${capsLockEnable?"क्ष":"7"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"क्ष":"7"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"७":"7"}`:`${capsLockEnable?"क्ष":"7"}`
+                      }
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"श्र":"8"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"८":"8"}`:`${capsLockEnable?"श्र":"8"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"श्र":"8"}
+                      {
+                          controlEnable?`${controlEnable?"८":"8"}`:`${capsLockEnable?"श्र":"8"}`
+                      }
+                      
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"(":"9"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"९":"9"}`:`${capsLockEnable?"(":"9"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"(":"9"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"९":"9"}`:`${capsLockEnable?"(":"9"}`
+                      }
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?")":"0"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"०":"0"}`:`${capsLockEnable?")":"0"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?")":"0"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"०":"0"}`:`${capsLockEnable?")":"0"}`
+                      }
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ः":"-"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"-"}`:`${capsLockEnable?"ः":"-"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"ः":"-"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"-":"-"}`:`${capsLockEnable?"ः":"-"}`
+                      }
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऋ":"ृ"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ॄ":"ृ"}`:`${capsLockEnable?"ऋ":"ृ"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      {capsLockEnable?"ऋ":"ृ"}
+                      
+                      {
+                          controlEnable?`${controlEnable?"ॄ":"ृ"}`:`${capsLockEnable?"ऋ":"ृ"}`
+                      }
                       </div>
                       
                     </div>
@@ -178,90 +248,146 @@ function HindiKeyboard() {
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"औ":"ौ"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"औ":"ौ"}`
+                      }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                        {capsLockEnable?"औ":"ौ"}
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऐ":"ै"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"ऐ":"ै"}
                         
+                        {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"औ":"ौ"}`
+                      }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"आ":"ा"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऐ":"ै"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"आ":"ा"}
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऐ":"ै"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"आ":"ा"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"आ":"ा"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ॣ":"ृ"}`:`${capsLockEnable?"ई":"ी"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"ॣ":"ृ"}`:`${capsLockEnable?"ई":"ी"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=> {dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऊ":"ू"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऊ":"ू"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"भ":"ब"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"भ":"ब"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ङ":"ह"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ङ":"ह"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ग़":"ृ"}`:`${capsLockEnable?"घ":"ग"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"ग़":"ृ"}`:`${capsLockEnable?"घ":"ग"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ध":"द"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ध":"द"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ज़":"ृ"}`:`${capsLockEnable?"झ":"ज"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"ज़":"ृ"}`:`${capsLockEnable?"झ":"ज"}`
+                        }
+                        </div>
+                      
+                    </div>
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ड़":"ृ"}`:`${capsLockEnable?"ढ":"ड"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
                         
+                        {
+                          controlEnable?`${controlEnable?"ड़":"ृ"}`:`${capsLockEnable?"ढ":"ड"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ई":"ी"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ञ":"़"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ई":"ी"}
                         
+                        {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ञ":"़"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=> {dispatch(concatCharacter(`${word+`${capsLockEnable?"ऊ":"ू"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऑ":"ॉ"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ऊ":"ू"}
                         
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"भ":"ब"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"भ":"ब"}
-                        
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ङ":"ह"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"ङ":"ह"}
-                        
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"घ":"ग"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"घ":"ग"}
-                        
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ध":"द"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"ध":"द"}
-                        
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"झ":"ज"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"झ":"ज"}
-                        
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ढ":"ड"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                        {capsLockEnable?"ढ":"ड"}
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ञ":"़"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                        {capsLockEnable?"ञ":"़"}
-                        </div>
-                      
-                    </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऑ":"ॉ"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                        {capsLockEnable?"ऑ":"ॉ"}
+                        {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऑ":"ॉ"}`
+                        }
                         </div>
                       
                     </div>
@@ -272,82 +398,129 @@ function HindiKeyboard() {
                       <div  className="caps-button-container" >
                        <div  className="caps-header" >
                        caps
-                        </div>
+                       </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ओ":"ो"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ओ":"ो"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ओ":"ो"}
-                        
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ओ":"ो"}`
+                        }
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ए":"े"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"ए":"े"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"अ":"्"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"अ":"्"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div  onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"इ":"ि"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"इ":"ि"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"उ":"ु"}`}`));setcapsLockEnable(false)}} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"उ":"ु"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"फ":"प"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ए":"े"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
                        
-                       {capsLockEnable?"फ":"प"}
-                        
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ए":"े"}`
+                        }
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऱ":"र"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"अ":"्"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ऱ":"र"}
-                        
+                      
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"अ":"्"}`
+                        }
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ख":"क"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div  onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"ॢ":"ृ"}`:`${capsLockEnable?"इ":"ि"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ख":"क"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"ॢ":"ृ"}`:`${capsLockEnable?"इ":"ि"}`
+                        }
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"थ":"त"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"उ":"ु"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"थ":"त"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"उ":"ु"}`
+                        }
+                      
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"छ":"च"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"फ":"प"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"छ":"च"}
+                       
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"फ":"प"}`
+                        }
+                      
                         </div>
                       
                       </div>
-                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ठ": "ट"}`}`))}} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऱ":"र"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ठ": "ट"}
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऱ":"र"}`
+                        }
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"क़":"ृ"}`:`${capsLockEnable?"ख":"क"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"क़":"ृ"}`:`${capsLockEnable?"ख":"क"}`
+                        }
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"थ":"त"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"थ":"त"}`
+                        }
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"":"ृ"}`:`${capsLockEnable?"छ":"च"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"f":"ृ"}`:`${capsLockEnable?"छ":"च"}`
+                        }
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ठ": "ट"}`
+                        }`}`))}} className="key-container" >
+                       <div className="key-content" >
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ठ": "ट"}`
+                        }
                         </div>
                       
                       </div>
@@ -362,75 +535,116 @@ function HindiKeyboard() {
                 </div>
                 <div className="subcontainer4" >
                     <div className="shift-button-container" >
-                       <div onClick={()=>setcapsLockEnable(!capsLockEnable)} className="shift-header" >
+                       <div onClick={()=>{setcapsLockEnable(!capsLockEnable);setcontrolEnable(false)}} className="shift-header" >
                        shift
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"f":"f"}`}`))} className="key-container" >
+                    <div onClick={()=>dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऎ":"ॆ"}`
+                        }`}`))} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"f":"f"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऎ":"ॆ"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ँ":"ं"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ँ":"ं"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ँ":"ं"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ँ":"ं"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ण":"म"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ण":"म"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ण":"म"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ण":"म"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऩ":"न"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऩ":"न"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ऩ":"न"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऩ":"न"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ऴ":"व"}`}`));;setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऴ":"व"}`
+                        }`}`));;setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ऴ":"व"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ऴ":"व"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"ळ":"ल"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ळ":"ल"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"ळ":"ल"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"ळ":"ल"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"श":"स"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"श":"स"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"श":"स"}
-                        
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"श":"स"}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"श":","}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"॰":"ृ"}`:`${capsLockEnable?"श":","}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"श":","}
+                       
+                       {
+                          controlEnable?`${controlEnable?"॰":"ृ"}`:`${capsLockEnable?"श":","}`
+                        }
                         </div>
                       
                     </div>
                     <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"।":"."}`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"।":"."}
+                       
+                       {
+                          controlEnable?`${controlEnable?"॥":"ृ"}`:`${capsLockEnable?"।":"."}`
+                        }
                         </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"य़":"य"}`}`));setcapsLockEnable(false)}} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"य़":"य"}`
+                        }`}`));setcapsLockEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"य़":"य"}
+                       
+                       {
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"य़":"य"}`
+                        }
                         </div>
                       
                     </div>
@@ -451,7 +665,7 @@ function HindiKeyboard() {
                       
                     </div>
                     <div className="key-container" >
-                       <div className="key-content" >
+                       <div onClick={()=>{setcontrolEnable(!controlEnable);setcapsLockEnable(false)}} className="key-content" >
                        control
                         </div>
                       

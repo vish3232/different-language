@@ -84,81 +84,81 @@ function EnglishKeyboard() {
           
             <div className="keyboard-main-container" >
                 <div className="subcontainer1" >
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'`'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"~":"`"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      `
+                      {shiftEnable?"~":"`"} 
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'1'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"!":"1"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      1
+                      {shiftEnable?"!":"1"} 
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'2'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"@":"2"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      2
+                      {shiftEnable?"@":"2"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'3'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"#":"3"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      3
+                      {shiftEnable?"#":"3"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'4'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"$":"4"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div  className="key-content" >
-                      4
+                      {shiftEnable?"$":"4"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'5'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"%":"5"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      5
+                      {shiftEnable?"%":"5"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'6'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"^":"6"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      6
+                      {shiftEnable?"^":"6"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'7'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"&":"7"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      7
+                      {shiftEnable?"&":"7"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'8'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"*":"8"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      8
+                      {shiftEnable?"*":"8"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'9'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"(":"9"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      9
+                      {shiftEnable?"(":"9"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'0'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?")":"0"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      0
+                      {shiftEnable?")":"0"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'-'}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"_":"-"}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      -
+                      {shiftEnable?"_":"-"}
                       </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'='}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"+":"="}`}`));setshiftEnable(false)}} className="key-container" >
                       <div className="key-content" >
-                      =
+                      {shiftEnable?"+":"="}
                       </div>
                       
                     </div>
@@ -170,96 +170,98 @@ function EnglishKeyboard() {
                     </div>
                 </div>
                 <div className="subcontainer2" >
-                    <div onClick={()=>dispatch(concatCharacter(`${word+'  '}`))} className="tab-button-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+'  '}`));setshiftEnable(false)}} className="tab-button-container" >
                        <div className="tab-header" >
                         tab
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"Q":"q"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"Q":"q"}`:`${capsLockEnable?"Q":"q"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                        {capsLockEnable?"Q":"q"}
+                        {shiftEnable?`${shiftEnable?"Q":"q"}`:`${capsLockEnable?"Q":"q"}`} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"W":"w"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"W":"w"}`:`${capsLockEnable?"W":"w"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"W":"w"}
-                        
+                       {shiftEnable?`${shiftEnable?"W":"w"}`:`${capsLockEnable?"W":"w"}`} 
+                       
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"E":"e"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"E":"e"}`:`${capsLockEnable?"E":"e"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"E":"e"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"E":"e"}`:`${capsLockEnable?"E":"e"}`} 
+                       
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"R":"r"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"R":"r"}`:`${capsLockEnable?"R":"r"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"R":"r"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"R":"r"}`:`${capsLockEnable?"R":"r"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=> dispatch(concatCharacter(`${word+`${capsLockEnable?"T":"t"}`}`))} className="key-container" >
+                    <div onClick={()=> {dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"T":"t"}`:`${capsLockEnable?"T":"t"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"T":"t"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"T":"t"}`:`${capsLockEnable?"T":"t"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"Y":"y"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"Y":"y"}`:`${capsLockEnable?"Y":"y"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"Y":"y"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"Y":"y"}`:`${capsLockEnable?"Y":"y"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"U":"u"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"Y":"y"}`:`${capsLockEnable?"U":"u"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"U":"u"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"U":"u"}`:`${capsLockEnable?"U":"u"}`}
+                      
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"I":"i"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"I":"i"}`:`${capsLockEnable?"I":"i"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"I":"i"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"I":"i"}`:`${capsLockEnable?"I":"i"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"O":"o"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"O":"o"}`:`${capsLockEnable?"O":"o"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"O":"o"}
-                        
+                       {shiftEnable?`${shiftEnable?"O":"o"}`:`${capsLockEnable?"O":"o"}`}
+                      
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"P":"p"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"P":"p"}`:`${capsLockEnable?"P":"p"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"P":"p"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"P":"p"}`:`${capsLockEnable?"P":"p"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`[`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"{":"["}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                        [
+                        {shiftEnable?"{":"["}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`]`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"}":"]"}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                        ]
+                        {shiftEnable?"}":"]"}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+` `}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"|":<>\</>} `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                        \
+                        {shiftEnable?"|":<>\</>} 
                         </div>
                       
                     </div>
@@ -273,79 +275,78 @@ function EnglishKeyboard() {
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"A":"a"}`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"A":"a"}`:`${capsLockEnable?"A":"a"}`} `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"A":"a"}
+                       {shiftEnable?`${shiftEnable?"A":"a"}`:`${capsLockEnable?"A":"a"}`} 
                         
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"S":"s"}`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"S":"s"}`:`${capsLockEnable?"S":"s"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"S":"s"}
+                       {shiftEnable?`${shiftEnable?"S":"s"}`:`${capsLockEnable?"S":"s"}`}  
                         
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"D":"d"}`}`))} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"D":"d"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div  onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"F":"f"}`}`))} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"F":"f"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"G":"g"}`}`))} className="key-container" >
-                       <div className="key-content" >
-                       {capsLockEnable?"G":"g"}
-                        
-                        </div>
-                      
-                      </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"H":"h"}`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"D":"d"}`:`${capsLockEnable?"D":"d"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
                        
-                       {capsLockEnable?"H":"h"}
-                        
+                       {shiftEnable?`${shiftEnable?"D":"d"}`:`${capsLockEnable?"D":"d"}`}  
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"J":"j"}`}`))} className="key-container" >
+                      <div  onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"F":"f"}`:`${capsLockEnable?"F":"f"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"J":"j"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"F":"f"}`:`${capsLockEnable?"F":"f"}`}  
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"K":"k"}`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${capsLockEnable?"G":"g"}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"K":"k"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"G":"g"}`:`${capsLockEnable?"G":"g"}`}  
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"L":"l"}`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"H":"h"}`:`${capsLockEnable?"H":"h"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"L":"l"}
-                        
+                       
+                       
+                       {shiftEnable?`${shiftEnable?"H":"h"}`:`${capsLockEnable?"H":"h"}`}  
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`;`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"J":"j"}`:`${capsLockEnable?"J":"j"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       ;
+                       
+                       {shiftEnable?`${shiftEnable?"J":"j"}`:`${capsLockEnable?"J":"j"}`}  
                         </div>
                       
                       </div>
-                      <div onClick={()=>dispatch(concatCharacter(`${word+`'`}`))} className="key-container" >
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"K":"k"}`:`${capsLockEnable?"K":"k"}`}  `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       '
+                       
+                       {shiftEnable?`${shiftEnable?"K":"k"}`:`${capsLockEnable?"K":"k"}`}  
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"L":"l"}`:`${capsLockEnable?"L":"l"}`}  `}`));setshiftEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       {shiftEnable?`${shiftEnable?"L":"l"}`:`${capsLockEnable?"L":"l"}`}  
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?":":";"}`}`));setshiftEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       {shiftEnable?":":";"}
+                        </div>
+                      
+                      </div>
+                      <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?<>"</>:"'"}`}`));setshiftEnable(false)}} className="key-container" >
+                       <div className="key-content" >
+                       {shiftEnable?<>"</>:"'"}
                         </div>
                       
                       </div>
@@ -365,70 +366,71 @@ function EnglishKeyboard() {
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"Z":"z"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"Z":"z"}`:`${capsLockEnable?"Z":"z"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"Z":"z"}
                         
+                        {shiftEnable?`${shiftEnable?"Z":"z"}`:`${capsLockEnable?"Z":"z"}`}   
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"X":"x"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"X":"x"}`:`${capsLockEnable?"X":"x"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"X":"x"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"X":"x"}`:`${capsLockEnable?"X":"x"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"C":"c"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"C":"c"}`:`${capsLockEnable?"C":"c"}`} `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"C":"c"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"C":"c"}`:`${capsLockEnable?"C":"c"}`} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"V":"v"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"V":"v"}`:`${capsLockEnable?"V":"v"}`} `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"V":"v"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"V":"v"}`:`${capsLockEnable?"V":"v"}`} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"B":"b"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"B":"b"}`:`${capsLockEnable?"B":"b"}`} `}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"B":"b"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"B":"b"}`:`${capsLockEnable?"B":"b"}`} 
+                       
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"N":"n"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"N":"n"}`:`${capsLockEnable?"N":"n"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"N":"n"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"N":"n"}`:`${capsLockEnable?"N":"n"}`} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`${capsLockEnable?"M":"m"}`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?`${shiftEnable?"M":"m"}`:`${capsLockEnable?"M":"m"}`}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       {capsLockEnable?"M":"m"}
-                        
+                       
+                       {shiftEnable?`${shiftEnable?"M":"m"}`:`${capsLockEnable?"M":"m"}`}
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`,`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"<":","}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       ,
+                       {shiftEnable?"<":","} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`.`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?">":"."}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       .
+                       {shiftEnable?">":"."} 
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+`/`}`))} className="key-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${shiftEnable?"?":"/"}`}`));setshiftEnable(false)}} className="key-container" >
                        <div className="key-content" >
-                       /
+                       {shiftEnable?"?":"/"}
                         </div>
                       
                     </div>
