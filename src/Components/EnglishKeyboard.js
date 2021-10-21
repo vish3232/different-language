@@ -269,7 +269,7 @@ function EnglishKeyboard() {
                     
                 </div>
                 <div className="subcontainer3" >
-                      <div onClick={()=>setcapsLockEnable(!capsLockEnable)} className="caps-button-container" >
+                      <div onClick={()=>{setcapsLockEnable(!capsLockEnable);setshiftEnable(false)}} className="caps-button-container" >
                        <div  className="caps-header" >
                        caps
                         </div>
@@ -360,8 +360,8 @@ function EnglishKeyboard() {
                    
                 </div>
                 <div className="subcontainer4" >
-                    <div className="shift-button-container" >
-                       <div onClick={()=>setshiftEnable(!shiftEnable)} className="shift-header" >
+                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}} className="shift-button-container" >
+                       <div  className="shift-header" >
                        shift
                         </div>
                       
@@ -434,7 +434,7 @@ function EnglishKeyboard() {
                         </div>
                       
                     </div>
-                    <div className="shift-button-container" >
+                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}}  className="shift-button-container" >
                        <div className="shift-header" >
                        shift
                         </div>
