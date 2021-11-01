@@ -1,0 +1,263 @@
+.read-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.button-container1{
+    width: 100%;
+    height: 125px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 0.20000000298023224px solid #707070;
+opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filter-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+height: 61px;
+border: 3px solid #0E7693;
+border-radius: 8px;
+
+background: none;
+}
+
+.filter-button-container:hover{
+    background: #0E769333 0% 0% no-repeat padding-box;
+}
+
+
+.filter-header{
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0px;
+color: #0E7693;
+opacity: 1;
+}
+
+.search-container{
+    position: relative;
+    width: 350px;
+height: 61px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #BBBBBB;
+border-radius: 8px;
+opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input{
+    padding-left: 10px;
+    width: 300px;
+    height: 50px;
+    border: none;
+}
+
+.search-icon{
+    cursor: pointer;
+    width: 29px;
+    height: 32px;
+    opacity: 1;
+}
+
+.checkbox-toggle-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label-header{
+    margin-right: 10px;
+}
+
+.toggle-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+   }
+
+.virtual-keyboard-label{
+    margin-right: 15px;
+}
+.switch-model{
+    margin-top: 5px;
+}
+
+.display-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+height: 61px;
+border: 3px solid #0E7693;
+border-radius: 8px;
+
+}
+.display-button-container:hover{
+    background: #0E769333 0% 0% no-repeat padding-box;
+}
+
+.display-button{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    letter-spacing: 0px;
+color: #0E7693;
+opacity: 1;
+}
+
+.book-content-container{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page-line-container{
+    background: red;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1093px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 8px;
+opacity: 1;
+}
+
+.page-line{
+    position: relative;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+
+.page-navigation-container{
+    align-self: center;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.back-button{
+    
+    width: 59px;
+height: 59px;
+}
+
+.current-button{
+    margin-left: 20px;
+    width: 59px;
+height: 59px;
+
+}
+
+.next-button{
+    margin-left: 20px;
+    width: 59px;
+    height: 59px;
+     
+}
+
+i.fa-icon { position: absolute; top: 20px; right: 50px;  cursor: pointer;
+}
+
+.key-container{
+    z-index: 3;
+    width: 600px;
+    height: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .key-container div{
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 29px;
+    height: 29px;
+    margin: 2px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    padding: 1px;
+    min-width: 0px;
+    max-width: 500px;
+    min-height: 0px;
+    max-height: 50px;
+    color: #444;
+    background-color: #f5f5f5;  
+}
+  
+  .keyboard-container{
+
+      position: absolute;
+      top:250px;
+      left: 250px;
+      z-index: 3;
+      height: auto;
+      background-color: white;
+      z-index: 2147483644;
+      font-family: arial, sans-serif;
+      font-size: 14px;
+      position: fixed;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+      touch-action: pinch-zoom;
+      padding: 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.3);
+      border-image: initial;
+    }
+
+  .cancel-icon{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 230px;
+      right: 375px;
+      
+  }
+
+  .line-no{
+      position: absolute;
+      bottom: 10px;
+      right: 50px; 
+       text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 100;
+      letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  
+  }
