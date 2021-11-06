@@ -217,7 +217,13 @@ box-sizing: border-box;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 }
-
+.keyboard-main-container .delete-button-container-selected{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
 .keyboard-main-container .delete-header{
       display: flex;
 flex-direction: row;
@@ -271,6 +277,13 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 }
 
+.keyboard-main-container .tab-button-container-selected{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
 
 .keyboard-main-container .tab-header{
       display: flex;
@@ -326,6 +339,13 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 }
 
+.keyboard-main-container .caps-button-container-selected{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
 .keyboard-main-container .caps-header{
       display: flex;
 flex-direction: row;
@@ -370,6 +390,13 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 }
 
+.keyboard-main-container .enter-button-container-selected{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
 .keyboard-main-container .enter-header{
       display: flex;
 flex-direction: row;
@@ -414,6 +441,15 @@ border: 0.15px solid rgba(0, 0, 0, 0.25);
 box-sizing: border-box;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 border-radius: 2px;
+}
+
+.keyboard-main-container .shift-button-container-selected{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+
 }
 .keyboard-main-container .shift-button-container:active{
     background: #FFFFFF;
@@ -470,6 +506,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 border-radius: 2px;
 }
 .keyboard-main-container .space-button-container:active{
+    background: #FFFFFF;
+border: 1px solid #FF8A25;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
+
+.keyboard-main-container .space-button-container-selected{
     background: #FFFFFF;
 border: 1px solid #FF8A25;
 box-sizing: border-box;

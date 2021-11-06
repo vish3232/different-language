@@ -24,7 +24,27 @@ function EnglishKeyboard() {
   }, [position])
 
   const EnglishkeyboardkeyPressed=(e)=>{
-    console.log(e.keyCode)
+    console.log(e.key)
+    if(e.key===" "){
+      dispatch(currentKey("space"))
+      dispatch(concatCharacter(`${word+" "}`))
+     
+    }else
+    if(e.key==="Enter"){
+      dispatch(currentKey("enter"))
+      dispatch(concatCharacter(`${word+"\n"}`))
+      
+    }else
+    if(e.key==="Tab"){
+      dispatch(currentKey("tab"))
+      dispatch(concatCharacter(`${word+'  '}`))
+    }else
+    if(e.key==="CapsLock"){
+      setcapsLockEnable(true)
+    }else
+    if(e.key==="Shift"){
+      setshiftEnable(true)
+    }else
     if (e.key === "a") {
       dispatch(currentKey("a"))
         dispatch(concatCharacter(`${word+"a"}`))
@@ -304,7 +324,7 @@ function EnglishKeyboard() {
      
       } else if (e.key === "Delete" || e.key === "Backspace") {
         dispatch(concatCharacter(word.slice(0,word.length-1)))
-        dispatch(currentKey(""))
+        dispatch(currentKey("delete"))
       } else if (e.key === " ") {
         
         dispatch(concatCharacter(`${word+" "}`))
@@ -398,7 +418,7 @@ function EnglishKeyboard() {
     return (
       <div>
         <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around'}} >
-          <input 
+          <textarea 
           
           onKeyDown={(e)=>{EnglishkeyboardkeyPressed(e)}}
             value={word} placeholder="search" type="text" className="search-input" />
@@ -528,7 +548,7 @@ function EnglishKeyboard() {
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(word.slice(0,word.length-1)));dispatch(currentKey(""))}} className="delete-button-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(word.slice(0,word.length-1)));dispatch(currentKey(""))}} className={selectedKey==="delete"? "delete-button-container-selected delete-button-container":"delete-button-container"} >
                       <div  className="delete-header" >
                       delete
                       </div>
@@ -536,7 +556,7 @@ function EnglishKeyboard() {
                     </div>
                 </div>
                 <div className="subcontainer2" >
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+'  '}`));setshiftEnable(false)}} className="tab-button-container" >
+                    <div onClick={()=>{dispatch(concatCharacter(`${word+'  '}`));setshiftEnable(false)}} className={selectedKey==="tab"?"tab-button-container tab-button-container-selected":"tab-button-container"} >
                        <div className="tab-header" >
                         tab
                         </div>
@@ -635,7 +655,7 @@ function EnglishKeyboard() {
                     
                 </div>
                 <div className="subcontainer3" >
-                      <div onClick={()=>{setcapsLockEnable(!capsLockEnable);setshiftEnable(false)}} className="caps-button-container" >
+                      <div onClick={()=>{setcapsLockEnable(!capsLockEnable);setshiftEnable(false)}} className={capsLockEnable?"caps-button-container-selected caps-button-container":"caps-button-container"}  >
                        <div  className="caps-header" >
                        caps
                         </div>
@@ -716,7 +736,7 @@ function EnglishKeyboard() {
                         </div>
                       
                       </div>
-                      <div  className="enter-button-container" >
+                      <div  className={selectedKey==="enter"? "enter-button-container enter-button-container-selected":"enter-button-container"} >
                        <div className="enter-header" >
                        enter
                         </div>
@@ -726,7 +746,7 @@ function EnglishKeyboard() {
                    
                 </div>
                 <div className="subcontainer4" >
-                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}} className="shift-button-container" >
+                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}} className={shiftEnable?"shift-button-container shift-button-container-selected":"shift-button-container"}  >
                        <div  className="shift-header" >
                        shift
                         </div>
@@ -800,8 +820,8 @@ function EnglishKeyboard() {
                         </div>
                       
                     </div>
-                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}}  className="shift-button-container" >
-                       <div className="shift-header" >
+                    <div onClick={()=>{setshiftEnable(!shiftEnable);setcapsLockEnable(false)}} className={shiftEnable?"shift-button-container shift-button-container-selected":"shift-button-container"}  >
+                       <div  className="shift-header" >
                        shift
                         </div>
                       
@@ -834,7 +854,7 @@ function EnglishKeyboard() {
                         </div>
                       
                     </div>
-                    <div onClick={()=>dispatch(concatCharacter(`${word+` `}`))} className="space-button-container" >
+                    <div onClick={()=>dispatch(concatCharacter(`${word+` `}`))} className={selectedKey==="space"?"space-button-container space-button-container-selected":"space-button-container"} >
                        <div className="space-header" >
                        space
                         </div>
