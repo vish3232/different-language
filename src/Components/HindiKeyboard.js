@@ -2,7 +2,7 @@ import React,{useState,useEffect,useRef} from 'react'
 import {EnglishkeyboardkeyPress} from '../Functions/functions'
 import '../Css/EnglishKeyboard.css'
 import {keyPress,HindiKeyboardPress} from '../Functions/functions'
-import {concatCharacter} from '../Redux/EnglishKeyboardActions'
+import {concatCharacter,currentKey} from '../Redux/EnglishKeyboardActions'
 import {useDispatch,useSelector} from 'react-redux'
 function HindiKeyboard() {
   const dispatch=useDispatch()
@@ -23,6 +23,391 @@ function HindiKeyboard() {
   
   useEffect(() => {
   }, [text])
+
+  const HindiKeyboardPress=(e)=>{
+    console.log(e.keyCode)
+      if (e.key === "`") {
+        dispatch(currentKey("`"))
+        dispatch(concatCharacter(`${word+"ॊ"}`))
+       
+        } else if (e.key === "1") {
+          dispatch(currentKey("1"))
+        dispatch(concatCharacter(`${word+"1"}`))
+        
+        } else if (e.key === "2") {
+          dispatch(currentKey("2"))
+          dispatch(concatCharacter(`${word+"2"}`))
+          
+        } else if (e.key === "3") {
+          dispatch(currentKey("3"))
+        dispatch(concatCharacter(`${word+"3"}`))
+        
+        } else if (e.key === "4") {
+          dispatch(currentKey("4"))
+          dispatch(concatCharacter(`${word+"4"}`))
+          
+        } else if (e.key === "5") {
+          dispatch(currentKey("5"))
+          dispatch(concatCharacter(`${word+"5"}`))
+          
+        } else if (e.key === "6") {
+          dispatch(currentKey("6"))
+        dispatch(concatCharacter(`${word+"6"}`))
+        
+        } else if (e.key === "7") {
+          dispatch(currentKey("7"))
+        dispatch(concatCharacter(`${word+"7"}`))
+        
+        } else if (e.key === "8") {
+          dispatch(currentKey("8"))
+        dispatch(concatCharacter(`${word+"8"}`))
+        
+        } else if (e.key === "9") {
+          dispatch(currentKey("9"))
+        dispatch(concatCharacter(`${word+"9"}`))
+        
+        } else if (e.key === "0") {
+          dispatch(currentKey("0"))
+        dispatch(concatCharacter(`${word+"0"}`))
+        
+        } else if (e.key === "-") {
+          dispatch(currentKey("-"))
+        dispatch(concatCharacter(`${word+"-"}`))
+        
+        } else if (e.key === "=") {
+          dispatch(currentKey("="))
+        dispatch(concatCharacter(`${word+"="}`))
+        
+        } else if (e.key === "a") {
+          dispatch(currentKey("ो"))
+          dispatch(concatCharacter(`${word+"ो"}`))
+          
+        } else if (e.key === "s") {
+          dispatch(currentKey("े"))
+          dispatch(concatCharacter(`${word+"े"}`))
+        
+        } else if (e.key === "d") {
+          dispatch(currentKey("्"))
+          dispatch(concatCharacter(`${word+"्"}`))
+        
+        } else if (e.key === "f") {
+          dispatch(currentKey("ि"))
+          dispatch(concatCharacter(`${word+"ि"}`))
+        
+        } else if (e.key === "g") {
+          dispatch(currentKey("ु"))
+          dispatch(concatCharacter(`${word+"ु"}`))
+        
+        } else if (e.key === "h") {
+          dispatch(currentKey("प"))
+          dispatch(concatCharacter(`${word+"प"}`))
+        
+        } else if (e.key === "j") {
+          dispatch(currentKey("र"))
+          dispatch(concatCharacter(`${word+"र"}`))
+        
+        } else if (e.key === "k") {
+          dispatch(currentKey("क"))
+          dispatch(concatCharacter(`${word+"क"}`))
+        
+        } else if (e.key === "l") {
+          dispatch(currentKey("त"))
+          dispatch(concatCharacter(`${word+"त"}`))
+        
+        } else if (e.key === ";") {
+          dispatch(currentKey("च"))
+          dispatch(concatCharacter(`${word+"च"}`))
+        
+        } else if (e.key === "'") {
+          dispatch(currentKey("ट"))
+          dispatch(concatCharacter(`${word+"ट"}`))
+        
+        } else if (e.key === "q") {
+          dispatch(currentKey("ौ"))
+          dispatch(concatCharacter(`${word+"ौ"}`))
+        
+        } else if (e.key === "w") {
+          dispatch(currentKey("ै"))
+          dispatch(concatCharacter(`${word+"ै"}`))
+      
+        } else if (e.key === "e") {
+          dispatch(currentKey("ा"))
+          dispatch(concatCharacter(`${word+"ा"}`))
+      
+        } else if (e.key === "r") {
+          dispatch(currentKey("ी"))
+          dispatch(concatCharacter(`${word+"ी"}`))
+      
+        } else if (e.key === "t") {
+          dispatch(currentKey("ू"))
+          dispatch(concatCharacter(`${word+"ू"}`))
+      
+        } else if (e.key === "y") {
+          dispatch(currentKey("ब"))
+          dispatch(concatCharacter(`${word+"ब"}`))
+      
+        } else if (e.key === "u") {
+          dispatch(currentKey("ह"))
+          dispatch(concatCharacter(`${word+"ह"}`))
+      
+        } else if (e.key === "i") {
+          dispatch(currentKey("ग"))
+          dispatch(concatCharacter(`${word+"ग"}`))
+      
+        } else if (e.key === "o") {
+          dispatch(currentKey("द"))
+          dispatch(concatCharacter(`${word+"द"}`))
+      
+        } else if (e.key === "p") {
+          dispatch(currentKey("ज"))
+          dispatch(concatCharacter(`${word+"ज"}`))
+      
+        } else if (e.key === "[") {
+          dispatch(currentKey("ड"))
+          dispatch(concatCharacter(`${word+"ड"}`))
+      
+        } else if (e.key === "]") {
+          dispatch(currentKey("़"))
+          dispatch(concatCharacter(`${word+"़"}`))
+      
+        } else if (e.keyCode === 220) {
+          dispatch(currentKey("ॉ"))
+          dispatch(concatCharacter(`${word+"ॉ"}`))
+      
+        } else if (e.key === "z") {
+          dispatch(currentKey("ॆ"))
+          dispatch(concatCharacter(`${word+"ॆ"}`))
+      
+        } else if (e.key === "x") {
+          dispatch(currentKey("ं"))
+          dispatch(concatCharacter(`${word+"ं"}`))
+      
+        } else if (e.key === "c") {
+          dispatch(currentKey("म"))
+          dispatch(concatCharacter(`${word+"म"}`))
+      
+        } else if (e.key === "v") {
+          dispatch(currentKey("न"))
+          dispatch(concatCharacter(`${word+"न"}`))
+      
+        } else if (e.key === "b") {
+          dispatch(currentKey("व"))
+          dispatch(concatCharacter(`${word+"व"}`))
+      
+        } else if (e.key === "n") {
+          dispatch(currentKey("ल"))
+          dispatch(concatCharacter(`${word+"ल"}`))
+      
+        } else if (e.key === "m") {
+          dispatch(currentKey("स"))
+          dispatch(concatCharacter(`${word+"स"}`))
+      
+        } else if (e.key === ",") {
+          dispatch(currentKey(","))
+          dispatch(concatCharacter(`${word+","}`))
+      
+        } else if (e.key === ".") {
+          dispatch(currentKey("."))
+          dispatch(concatCharacter(`${word+"."}`))
+      
+        } else if (e.key === "/") {
+          dispatch(currentKey("य"))
+          dispatch(concatCharacter(`${word+"य"}`))
+      
+        } else if (e.key === "~") {
+          dispatch(currentKey("ऒ"))
+          dispatch(concatCharacter(`${word+"ऒ"}`))
+      
+        } else if (e.key === "!") {
+          dispatch(currentKey("ऍ"))
+          dispatch(concatCharacter(`${word+"ऍ"}`))
+      
+        } else if (e.key === "@") {
+          dispatch(currentKey("ॅ"))
+          dispatch(concatCharacter(`${word+"ॅ"}`))
+      
+        } else if (e.key === "#") {
+          dispatch(currentKey("्र"))
+          dispatch(concatCharacter(`${word+"्र"}`))
+      
+        } else if (e.key === "$") {
+          dispatch(currentKey("र्"))
+          dispatch(concatCharacter(`${word+"र्"}`))
+      
+        } else if (e.key === "%") {
+          dispatch(currentKey("ज्ञ"))
+          dispatch(concatCharacter(`${word+"ज्ञ"}`))
+      
+        } else if (e.key === "^") {
+          dispatch(currentKey("क्ष"))
+          dispatch(concatCharacter(`${word+"क्ष"}`))
+      
+        } else if (e.key === "*") {
+          dispatch(currentKey("श्र"))
+          dispatch(concatCharacter(`${word+"श्र"}`))
+      
+        } else if (e.key === "(") {
+          dispatch(currentKey("("))
+          dispatch(concatCharacter(`${word+"("}`))
+      
+        } else if (e.key === ")") {
+          dispatch(currentKey(")"))
+          dispatch(concatCharacter(`${word+")"}`))
+      
+        } else if (e.key === "_") {
+          dispatch(currentKey("ः"))
+          dispatch(concatCharacter(`${word+"ः"}`))
+      
+        } else if (e.key === "+") {
+          dispatch(currentKey("ऋ"))
+          dispatch(concatCharacter(`${word+"ऋ"}`))
+      
+        } else if (e.key === "Q") {
+          dispatch(currentKey("औ"))
+          dispatch(concatCharacter(`${word+"औ"}`))
+      
+        } else if (e.key === "W") {
+          dispatch(currentKey("ऐ"))
+          dispatch(concatCharacter(`${word+"ऐ"}`))
+      
+        } else if (e.key === "E") {
+          dispatch(currentKey("आ"))
+          dispatch(concatCharacter(`${word+"आ"}`))
+      
+        } else if (e.key === "R") {
+          dispatch(currentKey("ई"))
+          dispatch(concatCharacter(`${word+"ई"}`))
+      
+        } else if (e.key === "T") {
+          dispatch(currentKey("ऊ"))
+          dispatch(concatCharacter(`${word+"ऊ"}`))
+      
+        } else if (e.key === "Y") {
+          dispatch(currentKey("भ"))
+          dispatch(concatCharacter(`${word+"भ"}`))
+      
+        } else if (e.key === "U") {
+          dispatch(currentKey("ङ"))
+          dispatch(concatCharacter(`${word+"ङ"}`))
+      
+        } else if (e.key === "I") {
+          dispatch(currentKey("घ"))
+          dispatch(concatCharacter(`${word+"घ"}`))
+      
+        } else if (e.key === "O") {
+          dispatch(currentKey("ध"))
+          dispatch(concatCharacter(`${word+"ध"}`))
+      
+        } else if (e.key === "P") {
+          dispatch(currentKey("झ"))
+          dispatch(concatCharacter(`${word+"झ"}`))
+      
+        } else if (e.key === "Delete" || e.key === "Backspace") {
+          dispatch(concatCharacter(word.slice(0,word.length-1)))
+          dispatch(currentKey("delete"))
+         
+        } else if (e.key === "{") {
+          dispatch(currentKey("ढ"))
+          dispatch(concatCharacter(`${word+"ढ"}`))
+      
+        } else if (e.key === "}") {
+          dispatch(currentKey("ञ"))
+          dispatch(concatCharacter(`${word+"ञ"}`))
+      
+        } else if (e.key === "|") {
+          dispatch(currentKey("ऑ"))
+          dispatch(concatCharacter(`${word+"ऑ"}`))
+      
+        } else if (e.key === "A") {
+          dispatch(currentKey("ओ"))
+          dispatch(concatCharacter(`${word+"ओ"}`))
+      
+        } else if (e.key === "S") {
+          dispatch(currentKey("ए"))
+          dispatch(concatCharacter(`${word+"ए"}`))
+      
+        } else if (e.key === "D") {
+          dispatch(currentKey("अ"))
+          dispatch(concatCharacter(`${word+"अ"}`))
+      
+        } else if (e.key === "F") {
+          dispatch(currentKey("इ"))
+          dispatch(concatCharacter(`${word+"इ"}`))
+      
+        } else if (e.key === "G") {
+          dispatch(currentKey("उ"))
+          dispatch(concatCharacter(`${word+"उ"}`))
+      
+        }else if (e.key === "H") {
+          dispatch(currentKey("फ"))
+          dispatch(concatCharacter(`${word+"फ"}`))
+      
+        }else if (e.key === "J") {
+          dispatch(currentKey("ऱ"))
+          dispatch(concatCharacter(`${word+"ऱ"}`))
+      
+        }else if (e.key === "K") {
+          dispatch(currentKey("ख"))
+          dispatch(concatCharacter(`${word+"ख"}`))
+      
+        }else if (e.key === "L") {
+          dispatch(currentKey("थ"))
+          dispatch(concatCharacter(`${word+"थ"}`))
+      
+        }else if (e.key === ":") {
+          dispatch(currentKey("छ"))
+          dispatch(concatCharacter(`${word+"छ"}`))
+      
+        }else if (e.keyCode === 222) {
+          dispatch(currentKey("ठ"))
+          dispatch(concatCharacter(`${word+"ठ"}`))
+      
+        }else if (e.key === "Z") {
+          dispatch(currentKey("ऎ"))
+          dispatch(concatCharacter(`${word+"ऎ"}`))
+      
+        }else if (e.key === "X") {
+          dispatch(currentKey("ँ"))
+          dispatch(concatCharacter(`${word+"ँ"}`))
+      
+        }else if (e.key === "C") {
+          dispatch(currentKey("ण"))
+          dispatch(concatCharacter(`${word+"ण"}`))
+      
+        }else if (e.key === "V") {
+          dispatch(currentKey("ऩ"))
+          dispatch(concatCharacter(`${word+"ऩ"}`))
+      
+        }else if (e.key === "B") {
+          dispatch(currentKey("ऴ"))
+          dispatch(concatCharacter(`${word+"ऴ"}`))
+      
+        }else if (e.key === "N") {
+          dispatch(currentKey("ळ"))
+          dispatch(concatCharacter(`${word+"ळ"}`))
+      
+        }else if (e.key === "M") {
+          dispatch(currentKey("श"))
+          dispatch(concatCharacter(`${word+"श"}`))
+      
+        }else if (e.key === "<") {
+          dispatch(currentKey("ष"))
+          dispatch(concatCharacter(`${word+"ष"}`))
+      
+        }else if (e.key === ">") {
+          dispatch(currentKey("।"))
+          dispatch(concatCharacter(`${word+"।"}`))
+      
+        }else if (e.key === "?") {
+          dispatch(currentKey("य़"))
+          dispatch(concatCharacter(`${word+"य़"}`))
+      
+        }else if (e.key === " ") {
+          dispatch(currentKey(" "))
+          dispatch(concatCharacter(`${word+" "}`))
+      
+        }
+  }
   
   // Update the current position if mouse is down
   const onMouseMove = (event) => {
@@ -37,8 +422,7 @@ function HindiKeyboard() {
       <div>
         <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around'}} >
           <input 
-          onKeyDown={(e)=>{isVirtual?console.log("") :dispatch(concatCharacter(HindiKeyboardPress(e)))}}
-          
+          onKeyDown={(e)=>{HindiKeyboardPress(e)}}
             value={word} placeholder="search" type="text" className="search-input" />
           <div onClick={()=>setVirtual(!isVirtual)} >virtual keyboard</div>
         </div>

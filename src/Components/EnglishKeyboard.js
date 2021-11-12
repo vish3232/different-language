@@ -24,7 +24,7 @@ function EnglishKeyboard() {
   }, [position])
 
   const EnglishkeyboardkeyPressed=(e)=>{
-    console.log(e.key)
+    console.log(e.keyCode)
     if(e.key===" "){
       dispatch(currentKey("space"))
       dispatch(concatCharacter(`${word+" "}`))
@@ -48,357 +48,429 @@ function EnglishKeyboard() {
     if (e.key === "a") {
       dispatch(currentKey("a"))
         dispatch(concatCharacter(`${word+"a"}`))
+        setshiftEnable(false)
       } else if (e.key === "A") {
         dispatch(concatCharacter(`${word+"A"}`))
         dispatch(currentKey("A"))
-     
+        setshiftEnable(false)
       } else if (e.key === "s") {
         dispatch(concatCharacter(`${word+"s"}`))
         dispatch(currentKey("s"))
+        setshiftEnable(false)
         } else if (e.key === "S") {
           dispatch(concatCharacter(`${word+"S"}`))
           dispatch(currentKey("S"))
-       
+          setshiftEnable(false)
       } else if (e.key === "d") {
         dispatch(concatCharacter(`${word+"d"}`))
         dispatch(currentKey("d"))
-     
+        setshiftEnable(false)
       } else if (e.key === "D") {
         dispatch(concatCharacter(`${word+"D"}`))
         dispatch(currentKey("D"))
-     
+        setshiftEnable(false)
       } else if (e.key === "f") {
         dispatch(concatCharacter(`${word+"f"}`))
         dispatch(currentKey("f"))
-     
+        setshiftEnable(false)
       } else if (e.key === "F") {
         dispatch(concatCharacter(`${word+"F"}`))
         dispatch(currentKey("F"))
-     
+        setshiftEnable(false)
       } else if (e.key === "g") {
         dispatch(concatCharacter(`${word+"g"}`))
         dispatch(currentKey("g"))
-     
+        setshiftEnable(false)
       } else if (e.key === "G") {
         dispatch(concatCharacter(`${word+"G"}`))
         dispatch(currentKey("G"))
-     
+        setshiftEnable(false)
       } else if (e.key === "h") {
         dispatch(concatCharacter(`${word+"h"}`))
         dispatch(currentKey("h"))
-     
+        setshiftEnable(false)
       } else if (e.key === "H") {
         dispatch(concatCharacter(`${word+"H"}`))
         dispatch(currentKey("H"))
-     
+        setshiftEnable(false)
       } else if (e.key === "j") {
         dispatch(concatCharacter(`${word+"j"}`))
         dispatch(currentKey("j"))
-     
+        setshiftEnable(false)
       } else if (e.key === "J") {
         dispatch(concatCharacter(`${word+"J"}`))
         dispatch(currentKey("J"))
-     
+        setshiftEnable(false)
       } else if (e.key === "k") {
         dispatch(concatCharacter(`${word+"k"}`))
         dispatch(currentKey("k"))
-     
+        setshiftEnable(false)
       } else if (e.key === "K") {
         dispatch(concatCharacter(`${word+"K"}`))
         dispatch(currentKey("K"))
-     
+        setshiftEnable(false)
       } else if (e.key === "l") {
         dispatch(concatCharacter(`${word+"l"}`))
         dispatch(currentKey("l"))
-     
+        setshiftEnable(false)
       } else if (e.key === "L") {
         dispatch(concatCharacter(`${word+"L"}`))
         dispatch(currentKey("L"))
-     
+        setshiftEnable(false)
       } else if (e.key === "z") {
         dispatch(concatCharacter(`${word+"z"}`))
         dispatch(currentKey("z"))
-     
+        setshiftEnable(false)
       } else if (e.key === "Z") {
         dispatch(concatCharacter(`${word+"Z"}`))
         dispatch(currentKey("Z"))
-     
+        setshiftEnable(false)
       } else if (e.key === "x") {
+        dispatch(currentKey("x"))
         dispatch(concatCharacter(`${word+"x"}`))
-     
+        setshiftEnable(false)
       } else if (e.key === "X") {
         dispatch(concatCharacter(`${word+"X"}`))
         dispatch(currentKey("X"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "c") {
         dispatch(concatCharacter(`${word+"c"}`))
         dispatch(currentKey("c/"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "C") {
         dispatch(concatCharacter(`${word+"C"}`))
         dispatch(currentKey("C"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "v") {
         dispatch(concatCharacter(`${word+"v"}`))
         dispatch(currentKey("v"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "V") {
         dispatch(concatCharacter(`${word+"V"}`))
         dispatch(currentKey("V"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "b") {
         dispatch(concatCharacter(`${word+"b"}`))
         dispatch(currentKey("b"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "B") {
         dispatch(concatCharacter(`${word+"B"}`))
         dispatch(currentKey("B"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "n") {
         dispatch(concatCharacter(`${word+"n"}`))
         dispatch(currentKey("n"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "N") {
         dispatch(concatCharacter(`${word+"N"}`))
         dispatch(currentKey("N"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "m") {
         dispatch(concatCharacter(`${word+"m"}`))
         dispatch(currentKey("m"))
-     
+        setshiftEnable(false)
+      
        } else if (e.key === "M") {
         dispatch(concatCharacter(`${word+"M"}`))
         dispatch(currentKey("M"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "q") {
         dispatch(concatCharacter(`${word+"q"}`))
         dispatch(currentKey("q"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "Q") {
         dispatch(concatCharacter(`${word+"Q"}`))
         dispatch(currentKey("Q"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "w") {
         dispatch(concatCharacter(`${word+"w"}`))
         dispatch(currentKey("w"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "W") {
         dispatch(concatCharacter(`${word+"W"}`))
         dispatch(currentKey("W"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "e") {
         dispatch(concatCharacter(`${word+"e"}`))
         dispatch(currentKey("e"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "E") {
         dispatch(concatCharacter(`${word+"E"}`))
         dispatch(currentKey("E"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "r") {
         dispatch(concatCharacter(`${word+"r"}`))
         dispatch(currentKey("r"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "R") {
         dispatch(concatCharacter(`${word+"R"}`))
         dispatch(currentKey("R"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "t") {
         dispatch(concatCharacter(`${word+"t"}`))
         dispatch(currentKey("t"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "T") {
         dispatch(concatCharacter(`${word+"T"}`))
         dispatch(currentKey("T"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "y") {
         dispatch(concatCharacter(`${word+"y"}`))
         dispatch(currentKey("y"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "Y") {
         dispatch(concatCharacter(`${word+"Y"}`))
         dispatch(currentKey("Y"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "i") {
         dispatch(concatCharacter(`${word+"i"}`))
         dispatch(currentKey("i"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "I") {
         dispatch(concatCharacter(`${word+"I"}`))
         dispatch(currentKey("I"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "1") {
         dispatch(concatCharacter(`${word+"1"}`))
         dispatch(currentKey("1"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "2") {
         dispatch(concatCharacter(`${word+"2"}`))
         dispatch(currentKey("2"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "3") {
         dispatch(concatCharacter(`${word+"3"}`))
         dispatch(currentKey("3"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "4") {
         dispatch(concatCharacter(`${word+"4"}`))
         dispatch(currentKey("4"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "5") {
         dispatch(concatCharacter(`${word+"5"}`))
         dispatch(currentKey("5"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "6") {
         dispatch(concatCharacter(`${word+"6"}`))
         dispatch(currentKey("6"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "7") {
         dispatch(concatCharacter(`${word+"7"}`))
         dispatch(currentKey("7"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "8") {
         dispatch(concatCharacter(`${word+"8"}`))
         dispatch(currentKey("8"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "9") {
         dispatch(concatCharacter(`${word+"9"}`))
         dispatch(currentKey("9"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "0") {
         dispatch(concatCharacter(`${word+"0"}`))
         dispatch(currentKey("0"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "-") {
         dispatch(concatCharacter(`${word+"-"}`))
         dispatch(currentKey("-"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "=") {
         dispatch(concatCharacter(`${word+"="}`))
         dispatch(currentKey("="))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "!") {
         dispatch(concatCharacter(`${word+"!"}`))
         dispatch(currentKey("!"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "@") {
         dispatch(concatCharacter(`${word+"@"}`))
         dispatch(currentKey("@"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "#") {
         dispatch(concatCharacter(`${word+"#"}`))
         dispatch(currentKey("#"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "$") {
         dispatch(concatCharacter(`${word+"$"}`))
         dispatch(currentKey("$"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "%") {
         dispatch(concatCharacter(`${word+"%"}`))
         dispatch(currentKey("%"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "^") {
         dispatch(concatCharacter(`${word+"^"}`))
         dispatch(currentKey("^"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "&") {
         dispatch(concatCharacter(`${word+"&"}`))
         dispatch(currentKey("&"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "*") {
         dispatch(concatCharacter(`${word+"*"}`))
         dispatch(currentKey("*"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "(") {
         dispatch(concatCharacter(`${word+"("}`))
         dispatch(currentKey("("))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === ")") {
         dispatch(concatCharacter(`${word+")"}`))
         dispatch(currentKey(")"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "`") {
         dispatch(concatCharacter(`${word+"'"}`))
         dispatch(currentKey("`"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "~") {
         dispatch(concatCharacter(`${word+"~"}`))
         dispatch(currentKey("~"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "Delete" || e.key === "Backspace") {
         dispatch(concatCharacter(word.slice(0,word.length-1)))
         dispatch(currentKey("delete"))
+        setshiftEnable(false)
+      
       } else if (e.key === " ") {
         
         dispatch(concatCharacter(`${word+" "}`))
         dispatch(currentKey(" "))
-     
+        setshiftEnable(false)
+      
      
       } else if (e.key === "]") {
         dispatch(concatCharacter(`${word+"]"}`))
         dispatch(currentKey("]"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "[") {
         dispatch(concatCharacter(`${word+"["}`))
         dispatch(currentKey("["))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === ":") {
         dispatch(concatCharacter(`${word+":"}`))
         dispatch(currentKey(":"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === ";") {
         dispatch(concatCharacter(`${word+";"}`))
         dispatch(currentKey(";"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === "'") {
         dispatch(concatCharacter(`${word+"'"}`))
         dispatch(currentKey("'"))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === ",") {
         dispatch(concatCharacter(`${word+","}`))
         dispatch(currentKey(","))
-     
+        setshiftEnable(false)
+      
       } else if (e.key === ".") {
         dispatch(concatCharacter(`${word+"."}`))
         dispatch(currentKey("."))
-     
+        setshiftEnable(false)
+      
       }else if (e.key==="o"){
         dispatch(concatCharacter(`${word+"o"}`))
         dispatch(currentKey("o"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="O"){
         dispatch(concatCharacter(`${word+"O"}`))
         dispatch(currentKey("O"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="p"){
         dispatch(concatCharacter(`${word+"p"}`))
         dispatch(currentKey("p"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="P"){
         dispatch(concatCharacter(`${word+"P"}`))
         dispatch(currentKey("P"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="u"){
         dispatch(concatCharacter(`${word+"u"}`))
         dispatch(currentKey("u"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="U"){
         dispatch(concatCharacter(`${word+"U"}`))
         dispatch(currentKey("U"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="x"){
         dispatch(concatCharacter(`${word+"x"}`))
         dispatch(currentKey("x"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="X"){
         dispatch(concatCharacter(`${word+"X"}`))
         dispatch(currentKey("X"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="c"){
         dispatch(concatCharacter(`${word+"c"}`))
         dispatch(currentKey("c"))
-     
+        setshiftEnable(false)
+      
       }else if(e.key==="C"){
         dispatch(concatCharacter(`${word+"C"}`))
         dispatch(currentKey("C"))
-     
+        setshiftEnable(false)
+      
       }
     
 }
