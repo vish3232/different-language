@@ -8,7 +8,6 @@ function HindiKeyboard() {
   const dispatch=useDispatch()
   const word = useSelector(state => state.EnglishKeyboard.word)
   const selectedKey = useSelector(state => state.EnglishKeyboard.selectedKey)
-   
     const [text,setText]=useState("")
     const [pressed, setPressed] = useState(false)
   const [position, setPosition] = useState({x: 0, y: 0})
@@ -27,6 +26,12 @@ function HindiKeyboard() {
 
   const HindiKeyboardPress=(e)=>{
     console.log(e.key)
+    if(e.key==="Control"){
+      setcontrolEnable(!controlEnable)
+        
+      
+      
+    }else{
     if(e.key===" "){
       dispatch(currentKey("space"))
       dispatch(concatCharacter(`${word+" "}`))
@@ -131,9 +136,14 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"्"}`))
         
         } else if (e.key === "f") {
+          if(controlEnable){
+            dispatch(currentKey("ॢ"))
+            dispatch(concatCharacter(`${word+"ॢ"}`))
+           
+          }else{
           dispatch(currentKey("ि"))
           dispatch(concatCharacter(`${word+"ि"}`))
-        
+          }
         } else if (e.key === "g") {
           dispatch(currentKey("ु"))
           dispatch(concatCharacter(`${word+"ु"}`))
@@ -147,9 +157,14 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"र"}`))
         
         } else if (e.key === "k") {
+          if(controlEnable){
+            dispatch(currentKey("क़"))
+            dispatch(concatCharacter(`${word+"क़"}`))
+           
+          }else{
           dispatch(currentKey("क"))
           dispatch(concatCharacter(`${word+"क"}`))
-        
+          }
         } else if (e.key === "l") {
           dispatch(currentKey("त"))
           dispatch(concatCharacter(`${word+"त"}`))
@@ -157,7 +172,7 @@ function HindiKeyboard() {
         } else if (e.key === ";") {
           dispatch(currentKey("च"))
           dispatch(concatCharacter(`${word+"च"}`))
-        
+          
         } else if (e.key === "'") {
           dispatch(currentKey("ट"))
           dispatch(concatCharacter(`${word+"ट"}`))
@@ -175,9 +190,14 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"ा"}`))
       
         } else if (e.key === "r") {
+          if(controlEnable){
+            dispatch(currentKey("ॣ"))
+            dispatch(concatCharacter(`${word+"ॣ"}`))
+            
+          }else{
           dispatch(currentKey("ी"))
           dispatch(concatCharacter(`${word+"ी"}`))
-      
+          }
         } else if (e.key === "t") {
           dispatch(currentKey("ू"))
           dispatch(concatCharacter(`${word+"ू"}`))
@@ -191,21 +211,37 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"ह"}`))
       
         } else if (e.key === "i") {
+          if(controlEnable){
+            dispatch(currentKey("ग़"))
+            dispatch(concatCharacter(`${word+"ग़"}`))
+        
+          }else{
           dispatch(currentKey("ग"))
           dispatch(concatCharacter(`${word+"ग"}`))
+          }
       
         } else if (e.key === "o") {
           dispatch(currentKey("द"))
           dispatch(concatCharacter(`${word+"द"}`))
       
         } else if (e.key === "p") {
+          if(controlEnable){
+            dispatch(currentKey("ज़"))
+            dispatch(concatCharacter(`${word+"ज़"}`))
+        
+          }else{
           dispatch(currentKey("ज"))
           dispatch(concatCharacter(`${word+"ज"}`))
-      
+          }
         } else if (e.key === "[") {
+          if(controlEnable){
+            dispatch(currentKey("ड़"))
+          dispatch(concatCharacter(`${word+"ड़"}`))
+      
+          }else{
           dispatch(currentKey("ड"))
           dispatch(concatCharacter(`${word+"ड"}`))
-      
+          }
         } else if (e.key === "]") {
           dispatch(currentKey("़"))
           dispatch(concatCharacter(`${word+"़"}`))
@@ -217,7 +253,7 @@ function HindiKeyboard() {
         } else if (e.key === "z") {
           dispatch(currentKey("ॆ"))
           dispatch(concatCharacter(`${word+"ॆ"}`))
-      
+          
         } else if (e.key === "x") {
           dispatch(currentKey("ं"))
           dispatch(concatCharacter(`${word+"ं"}`))
@@ -243,13 +279,23 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"स"}`))
       
         } else if (e.key === ",") {
+          if(controlEnable){
+            dispatch(currentKey("॰"))
+            dispatch(concatCharacter(`${word+"॰"}`))
+            
+          }else{
           dispatch(currentKey(","))
           dispatch(concatCharacter(`${word+","}`))
-      
+          }
         } else if (e.key === ".") {
+          if(controlEnable){
+            dispatch(currentKey("॥"))
+            dispatch(concatCharacter(`${word+"॥"}`))
+            
+          }else{
           dispatch(currentKey("."))
           dispatch(concatCharacter(`${word+"."}`))
-      
+          }
         } else if (e.key === "/") {
           dispatch(currentKey("य"))
           dispatch(concatCharacter(`${word+"य"}`))
@@ -447,6 +493,7 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+" "}`))
       
         }
+      }
   }
   
   // Update the current position if mouse is down
