@@ -139,7 +139,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("ॢ"))
             dispatch(concatCharacter(`${word+"ॢ"}`))
-           
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("ि"))
           dispatch(concatCharacter(`${word+"ि"}`))
@@ -160,7 +164,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("क़"))
             dispatch(concatCharacter(`${word+"क़"}`))
-           
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("क"))
           dispatch(concatCharacter(`${word+"क"}`))
@@ -193,7 +201,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("ॣ"))
             dispatch(concatCharacter(`${word+"ॣ"}`))
-            
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("ी"))
           dispatch(concatCharacter(`${word+"ी"}`))
@@ -214,7 +226,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("ग़"))
             dispatch(concatCharacter(`${word+"ग़"}`))
-        
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("ग"))
           dispatch(concatCharacter(`${word+"ग"}`))
@@ -228,7 +244,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("ज़"))
             dispatch(concatCharacter(`${word+"ज़"}`))
-        
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("ज"))
           dispatch(concatCharacter(`${word+"ज"}`))
@@ -237,7 +257,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("ड़"))
           dispatch(concatCharacter(`${word+"ड़"}`))
-      
+          setTimeout(() => {   // ***
+            dispatch(currentKey(""))
+            setcontrolEnable(false)
+            // *** If you want to clear the error message as well
+        }, 2000);
           }else{
           dispatch(currentKey("ड"))
           dispatch(concatCharacter(`${word+"ड"}`))
@@ -282,7 +306,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("॰"))
             dispatch(concatCharacter(`${word+"॰"}`))
-            
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey(","))
           dispatch(concatCharacter(`${word+","}`))
@@ -291,7 +319,11 @@ function HindiKeyboard() {
           if(controlEnable){
             dispatch(currentKey("॥"))
             dispatch(concatCharacter(`${word+"॥"}`))
-            
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
           }else{
           dispatch(currentKey("."))
           dispatch(concatCharacter(`${word+"."}`))
@@ -508,7 +540,7 @@ function HindiKeyboard() {
     return (
       <div>
         <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around'}} >
-          <input 
+          <textarea 
           onKeyDown={(e)=>{HindiKeyboardPress(e)}}
             value={word} placeholder="search" type="text" className="search-input" />
           <div onClick={()=>setVirtual(!isVirtual)} >virtual keyboard</div>
@@ -1191,7 +1223,7 @@ function HindiKeyboard() {
                     <div onClick={()=>{dispatch(concatCharacter(`${word+`${
                           controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"य़":"य"}`
                         }`}`));setcapsLockEnable(false)}} className={selectedKey===`${
-                          controlEnable?`${controlEnable?"॥":"ृ"}`:`${capsLockEnable?"।":"."}`
+                          controlEnable?`${controlEnable?"-":"ृ"}`:`${capsLockEnable?"य़":"य"}`
                         }`?"key-container key-container-active":"key-container"} >
                        <div className="key-content" >
                        
