@@ -27,8 +27,12 @@ function HindiKeyboard() {
   const HindiKeyboardPress=(e)=>{
     console.log(e.key)
     if(e.key==="Control"){
+      dispatch(currentKey("control"))
       setcontrolEnable(!controlEnable)
-        
+      setTimeout(() => {   // ***
+        dispatch(currentKey(""))
+        setcontrolEnable(false)
+    }, 2000);
       
       
     }else{
@@ -72,69 +76,190 @@ function HindiKeyboard() {
     }else
     
       if (e.key === "`") {
+        if(controlEnable){
+
+        }else{
         dispatch(currentKey("ॊ"))
         dispatch(concatCharacter(`${word+"ॊ"}`))
-       
+        }
         } else if (e.key === "1") {
+          if(controlEnable){
+            dispatch(currentKey("१"))
+            dispatch(concatCharacter(`${word+"१"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+          }else{
           dispatch(currentKey("1"))
         dispatch(concatCharacter(`${word+"1"}`))
-        
+          }
         } else if (e.key === "2") {
+          if(controlEnable){
+            dispatch(currentKey("२"))
+            dispatch(concatCharacter(`${word+"२"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+          }else{
           dispatch(currentKey("2"))
           dispatch(concatCharacter(`${word+"2"}`))
-          
+          }
         } else if (e.key === "3") {
+          if(controlEnable){
+            dispatch(currentKey("३"))
+            dispatch(concatCharacter(`${word+"३"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+          }else{
           dispatch(currentKey("3"))
         dispatch(concatCharacter(`${word+"3"}`))
-        
+          }
         } else if (e.key === "4") {
+          if(controlEnable){
+            dispatch(currentKey("४"))
+            dispatch(concatCharacter(`${word+"४"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+          }else{
           dispatch(currentKey("4"))
           dispatch(concatCharacter(`${word+"4"}`))
-          
+          }
         } else if (e.key === "5") {
+          if(controlEnable){
+            dispatch(currentKey("५"))
+            dispatch(concatCharacter(`${word+"५"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("5"))
           dispatch(concatCharacter(`${word+"5"}`))
-          
+          }
         } else if (e.key === "6") {
+          if(controlEnable){
+            dispatch(currentKey("६"))
+            dispatch(concatCharacter(`${word+"६"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("6"))
         dispatch(concatCharacter(`${word+"6"}`))
-        
+          }
         } else if (e.key === "7") {
+          if(controlEnable){
+            dispatch(currentKey("७"))
+            dispatch(concatCharacter(`${word+"७"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("7"))
         dispatch(concatCharacter(`${word+"7"}`))
-        
+          }
         } else if (e.key === "8") {
+          if(controlEnable){
+            dispatch(currentKey("८"))
+            dispatch(concatCharacter(`${word+"८"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("8"))
         dispatch(concatCharacter(`${word+"8"}`))
-        
+          }
         } else if (e.key === "9") {
+          if(controlEnable){
+            dispatch(currentKey("९"))
+            dispatch(concatCharacter(`${word+"९"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("9"))
         dispatch(concatCharacter(`${word+"9"}`))
-        
+          }
         } else if (e.key === "0") {
+          if(controlEnable){
+            dispatch(currentKey("०"))
+            dispatch(concatCharacter(`${word+"०"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("0"))
         dispatch(concatCharacter(`${word+"0"}`))
-        
+          }
         } else if (e.key === "-") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("-"))
         dispatch(concatCharacter(`${word+"-"}`))
-        
+          }
         } else if (e.key === "=") {
+          if(controlEnable){
+            dispatch(currentKey("ॄ"))
+            dispatch(concatCharacter(`${word+"ॄ"}`))
+            setTimeout(() => {   // ***
+              dispatch(currentKey(""))
+              setcontrolEnable(false)
+              // *** If you want to clear the error message as well
+          }, 2000);
+
+          }else{
           dispatch(currentKey("="))
         dispatch(concatCharacter(`${word+"="}`))
-        
+          }
         } else if (e.key === "a") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ो"))
           dispatch(concatCharacter(`${word+"ो"}`))
-          
+          }
         } else if (e.key === "s") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("े"))
           dispatch(concatCharacter(`${word+"े"}`))
-        
+          }
         } else if (e.key === "d") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("्"))
           dispatch(concatCharacter(`${word+"्"}`))
-        
+          }
         } else if (e.key === "f") {
           if(controlEnable){
             dispatch(currentKey("ॢ"))
@@ -149,17 +274,28 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"ि"}`))
           }
         } else if (e.key === "g") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ु"))
           dispatch(concatCharacter(`${word+"ु"}`))
-        
+          }
         } else if (e.key === "h") {
+          if(controlEnable){
+
+          }else{
+
+          
           dispatch(currentKey("प"))
           dispatch(concatCharacter(`${word+"प"}`))
-        
+          }
         } else if (e.key === "j") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("र"))
           dispatch(concatCharacter(`${word+"र"}`))
-        
+          }
         } else if (e.key === "k") {
           if(controlEnable){
             dispatch(currentKey("क़"))
@@ -174,29 +310,47 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"क"}`))
           }
         } else if (e.key === "l") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("त"))
           dispatch(concatCharacter(`${word+"त"}`))
-        
+          }
         } else if (e.key === ";") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("च"))
           dispatch(concatCharacter(`${word+"च"}`))
-          
+          }
         } else if (e.key === "'") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ट"))
           dispatch(concatCharacter(`${word+"ट"}`))
-        
+          }
         } else if (e.key === "q") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ौ"))
           dispatch(concatCharacter(`${word+"ौ"}`))
-        
+          }
         } else if (e.key === "w") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ै"))
           dispatch(concatCharacter(`${word+"ै"}`))
-      
+          }
         } else if (e.key === "e") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ा"))
           dispatch(concatCharacter(`${word+"ा"}`))
-      
+          }
         } else if (e.key === "r") {
           if(controlEnable){
             dispatch(currentKey("ॣ"))
@@ -211,17 +365,26 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"ी"}`))
           }
         } else if (e.key === "t") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ू"))
           dispatch(concatCharacter(`${word+"ू"}`))
-      
+          }
         } else if (e.key === "y") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ब"))
           dispatch(concatCharacter(`${word+"ब"}`))
-      
+          }
         } else if (e.key === "u") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ह"))
           dispatch(concatCharacter(`${word+"ह"}`))
-      
+          }
         } else if (e.key === "i") {
           if(controlEnable){
             dispatch(currentKey("ग़"))
@@ -237,9 +400,12 @@ function HindiKeyboard() {
           }
       
         } else if (e.key === "o") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("द"))
           dispatch(concatCharacter(`${word+"द"}`))
-      
+          }
         } else if (e.key === "p") {
           if(controlEnable){
             dispatch(currentKey("ज़"))
@@ -267,41 +433,68 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"ड"}`))
           }
         } else if (e.key === "]") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("़"))
           dispatch(concatCharacter(`${word+"़"}`))
-      
+          }
         } else if (e.keyCode === 220) {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ॉ"))
           dispatch(concatCharacter(`${word+"ॉ"}`))
-      
+          }
         } else if (e.key === "z") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ॆ"))
           dispatch(concatCharacter(`${word+"ॆ"}`))
-          
+          }
         } else if (e.key === "x") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ं"))
           dispatch(concatCharacter(`${word+"ं"}`))
-      
+          }
         } else if (e.key === "c") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("म"))
           dispatch(concatCharacter(`${word+"म"}`))
-      
+          }
         } else if (e.key === "v") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("न"))
           dispatch(concatCharacter(`${word+"न"}`))
-      
+          }
         } else if (e.key === "b") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("व"))
           dispatch(concatCharacter(`${word+"व"}`))
-      
+          }
         } else if (e.key === "n") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ल"))
           dispatch(concatCharacter(`${word+"ल"}`))
-      
+          }
         } else if (e.key === "m") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("स"))
           dispatch(concatCharacter(`${word+"स"}`))
-      
+          }
         } else if (e.key === ",") {
           if(controlEnable){
             dispatch(currentKey("॰"))
@@ -329,201 +522,336 @@ function HindiKeyboard() {
           dispatch(concatCharacter(`${word+"."}`))
           }
         } else if (e.key === "/") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("य"))
           dispatch(concatCharacter(`${word+"य"}`))
-      
+          }
         } else if (e.key === "~") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऒ"))
           dispatch(concatCharacter(`${word+"ऒ"}`))
-      
+          }
         } else if (e.key === "!") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऍ"))
           dispatch(concatCharacter(`${word+"ऍ"}`))
-      
+          }
         } else if (e.key === "@") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ॅ"))
           dispatch(concatCharacter(`${word+"ॅ"}`))
-      
+          }
         } else if (e.key === "#") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("्र"))
           dispatch(concatCharacter(`${word+"्र"}`))
-      
+          }
         } else if (e.key === "$") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("र्"))
           dispatch(concatCharacter(`${word+"र्"}`))
-      
+          }
         } else if (e.key === "%") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ज्ञ"))
           dispatch(concatCharacter(`${word+"ज्ञ"}`))
-      
+          }
         } else if (e.key === "^") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("क्ष"))
           dispatch(concatCharacter(`${word+"क्ष"}`))
-      
+          }
         } else if (e.key === "*") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("श्र"))
           dispatch(concatCharacter(`${word+"श्र"}`))
-      
+          }
         } else if (e.key === "(") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("("))
           dispatch(concatCharacter(`${word+"("}`))
-      
+          }
         } else if (e.key === ")") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey(")"))
           dispatch(concatCharacter(`${word+")"}`))
-      
+          }
         } else if (e.key === "_") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ः"))
           dispatch(concatCharacter(`${word+"ः"}`))
-      
+          }
         } else if (e.key === "+") {
+          if(controlEnable){}
+          else{
           dispatch(currentKey("ऋ"))
           dispatch(concatCharacter(`${word+"ऋ"}`))
-      
+          }
         } else if (e.key === "Q") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("औ"))
           dispatch(concatCharacter(`${word+"औ"}`))
-      
+          }
         } else if (e.key === "W") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऐ"))
           dispatch(concatCharacter(`${word+"ऐ"}`))
-      
+          }
         } else if (e.key === "E") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("आ"))
           dispatch(concatCharacter(`${word+"आ"}`))
-      
+          }
         } else if (e.key === "R") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ई"))
           dispatch(concatCharacter(`${word+"ई"}`))
-      
+          }
         } else if (e.key === "T") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऊ"))
           dispatch(concatCharacter(`${word+"ऊ"}`))
-      
+          }
         } else if (e.key === "Y") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("भ"))
           dispatch(concatCharacter(`${word+"भ"}`))
-      
+          }
         } else if (e.key === "U") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ङ"))
           dispatch(concatCharacter(`${word+"ङ"}`))
-      
+          }
         } else if (e.key === "I") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("घ"))
           dispatch(concatCharacter(`${word+"घ"}`))
-      
+          }
         } else if (e.key === "O") {
+          if(controlEnable){}else{
           dispatch(currentKey("ध"))
           dispatch(concatCharacter(`${word+"ध"}`))
-      
+          }
         } else if (e.key === "P") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("झ"))
           dispatch(concatCharacter(`${word+"झ"}`))
-      
+          }
         } else if (e.key === "Delete" || e.key === "Backspace") {
           dispatch(concatCharacter(word.slice(0,word.length-1)))
           dispatch(currentKey("delete"))
          
         } else if (e.key === "{") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ढ"))
           dispatch(concatCharacter(`${word+"ढ"}`))
-      
+          }
         } else if (e.key === "}") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ञ"))
           dispatch(concatCharacter(`${word+"ञ"}`))
-      
+          }
         } else if (e.key === "|") {
+          if(controlEnable){}else{
           dispatch(currentKey("ऑ"))
           dispatch(concatCharacter(`${word+"ऑ"}`))
-      
+          }
         } else if (e.key === "A") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ओ"))
           dispatch(concatCharacter(`${word+"ओ"}`))
-      
+          }
         } else if (e.key === "S") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ए"))
           dispatch(concatCharacter(`${word+"ए"}`))
-      
+          }
         } else if (e.key === "D") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("अ"))
           dispatch(concatCharacter(`${word+"अ"}`))
-      
+          }
         } else if (e.key === "F") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("इ"))
           dispatch(concatCharacter(`${word+"इ"}`))
-      
+          }
         } else if (e.key === "G") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("उ"))
           dispatch(concatCharacter(`${word+"उ"}`))
-      
+          }
         }else if (e.key === "H") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("फ"))
           dispatch(concatCharacter(`${word+"फ"}`))
-      
+          }
         }else if (e.key === "J") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऱ"))
           dispatch(concatCharacter(`${word+"ऱ"}`))
-      
+          }
         }else if (e.key === "K") {
+          if(controlEnable){}else{
           dispatch(currentKey("ख"))
           dispatch(concatCharacter(`${word+"ख"}`))
-      
+          }
         }else if (e.key === "L") {
+          if(controlEnable){}else{
           dispatch(currentKey("थ"))
           dispatch(concatCharacter(`${word+"थ"}`))
-      
+          }
         }else if (e.key === ":") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("छ"))
           dispatch(concatCharacter(`${word+"छ"}`))
-      
+          }
         }else if (e.keyCode === 222) {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ठ"))
           dispatch(concatCharacter(`${word+"ठ"}`))
-      
+          }
         }else if (e.key === "Z") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऎ"))
           dispatch(concatCharacter(`${word+"ऎ"}`))
-      
+          }
         }else if (e.key === "X") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ँ"))
           dispatch(concatCharacter(`${word+"ँ"}`))
-      
+          }
         }else if (e.key === "C") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ण"))
           dispatch(concatCharacter(`${word+"ण"}`))
-      
+          }
         }else if (e.key === "V") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऩ"))
           dispatch(concatCharacter(`${word+"ऩ"}`))
-      
+          }
         }else if (e.key === "B") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ऴ"))
           dispatch(concatCharacter(`${word+"ऴ"}`))
-      
+          }
         }else if (e.key === "N") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ळ"))
           dispatch(concatCharacter(`${word+"ळ"}`))
-      
+          }
         }else if (e.key === "M") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("श"))
           dispatch(concatCharacter(`${word+"श"}`))
-      
+          }
         }else if (e.key === "<") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("ष"))
           dispatch(concatCharacter(`${word+"ष"}`))
-      
+          }
         }else if (e.key === ">") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("।"))
           dispatch(concatCharacter(`${word+"।"}`))
-      
+          }
         }else if (e.key === "?") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey("य़"))
           dispatch(concatCharacter(`${word+"य़"}`))
-      
+          }
         }else if (e.key === " ") {
+          if(controlEnable){
+
+          }else{
           dispatch(currentKey(" "))
           dispatch(concatCharacter(`${word+" "}`))
-      
+          }
         }
       }
   }
@@ -1249,7 +1577,7 @@ function HindiKeyboard() {
                         </div>
                       
                     </div>
-                    <div className="key-container" >
+                    <div className={selectedKey==="control" ?"key-container key-container-active":"key-container"} >
                        <div onClick={()=>{setcontrolEnable(!controlEnable);setcapsLockEnable(false)}} className="key-content" >
                        control
                         </div>
