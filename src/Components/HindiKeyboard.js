@@ -1417,7 +1417,7 @@ function HindiKeyboard() {
                         </div>
                       
                       </div>
-                      <div  className={selectedKey==="enter"? "enter-button-container enter-button-container-selected":"enter-button-container"} >
+                      <div onClick={()=> dispatch(concatCharacter(`${word+"\n"}`))} className={selectedKey==="enter"? "enter-button-container enter-button-container-selected":"enter-button-container"} >
                        <div className="enter-header" >
                        enter
                         </div>
@@ -1579,19 +1579,14 @@ function HindiKeyboard() {
                     </div>
                     <div className={selectedKey==="control" ?"key-container key-container-active":"key-container"} >
                        <div onClick={()=>{setcontrolEnable(!controlEnable);setcapsLockEnable(false)}} className="key-content" >
-                       control
+                       ctrl
                         </div>
                       
                     </div>
-                    <div className="key-container" >
-                       <div className="key-content" >
-                       option
-                        </div>
-                      
-                    </div>
+                    
                     <div className="command-button-container" >
                        <div className="command-header" >
-                       command
+                       cmd
                         </div>
                       
                     </div>

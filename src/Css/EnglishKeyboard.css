@@ -14,7 +14,8 @@
     background: #FFFFFF;
 box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
 border-radius: 5px;
-width: 778px;
+width: 386px;
+height: 170px;
 }
 .language-and-font-and-cancel-container{
     display: flex;
@@ -32,7 +33,7 @@ width: 778px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 25%;
+    width: 20%;
 }
 
 /*language-dropdown-main-container*/
@@ -113,7 +114,7 @@ color: #000000;
     font-family: 'Mukta', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.02em;
     
@@ -121,14 +122,15 @@ color: #000000;
     
 }
 .keyboard-main-container{
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 97%;
+    
     background-color: #f8f8f8;
-    padding: 10px;
+    width: 100%;
+height: 130px;
+margin-top: 10px;
 }
 
 .keyboard-main-container .subcontainer1{
@@ -136,7 +138,10 @@ color: #000000;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-top: 5px;
+    
 }
 
 .keyboard-main-container .key-container{
@@ -144,10 +149,10 @@ color: #000000;
     background: #FFFFFF;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 4px;
-margin-right: 5.15px;
+margin-right: 5px;
 
-padding-left: 5px;
-padding-right:5px ;
+width: 20px;
+height: 20px;
 }
 
 .keyboard-main-container .key-container:hover{
@@ -183,13 +188,14 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
 color: #000000;
 background: #FFFFFF;
 border: none;
+height: 17px;
 }
 
 .keyboard-main-container  .delete-button-container{
@@ -197,10 +203,8 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 15px;
-padding-left: 15px;
+width: 31px;
+height: 20px;
 }
 
 .keyboard-main-container .delete-button-container:hover{
@@ -233,7 +237,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -244,12 +248,14 @@ border: none;
 }
 
 .keyboard-main-container .subcontainer2{
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-top: 5px;
+
 }
 
 .keyboard-main-container  .tab-button-container{
@@ -257,10 +263,9 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 20px;
-padding-left: 20px;
+width: 31px;
+height: 20px;
+
 }
 .keyboard-main-container .tab-button-container:hover{
     background: #FFFFFF;
@@ -294,7 +299,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -306,12 +311,14 @@ border: none;
 
 
 .keyboard-main-container .subcontainer3{
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-top: 5px;
+
 }
 
 .keyboard-main-container  .caps-button-container{
@@ -319,10 +326,9 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 20px;
-padding-left: 20px;
+width: 31px;
+height: 20px;
+
 }
 .keyboard-main-container .caps-button-container:hover{
     background: #FFFFFF;
@@ -355,7 +361,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -370,10 +376,9 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 20px;
-padding-left: 20px;
+width: 31px;
+height: 20px;
+
 }
 .keyboard-main-container .enter-button-container:hover{
     background: #FFFFFF;
@@ -406,7 +411,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -417,12 +422,14 @@ border: none;
 }
 
 .keyboard-main-container .subcontainer4{
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-top: 5px;
+
 }
 
 .keyboard-main-container  .shift-button-container{
@@ -430,10 +437,9 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 25px;
-padding-left: 25px;
+width: 31px;
+height: 20px;
+
 }
 .keyboard-main-container .shift-button-container:hover{
     background: #FFFFFF;
@@ -468,7 +474,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -480,12 +486,14 @@ border: none;
 
 
 .keyboard-main-container .subcontainer5{
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-top: 5px;
+
 }
 
 .keyboard-main-container  .space-button-container{
@@ -493,10 +501,8 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 65px;
-padding-left: 65px;
+width: 131px;
+height: 20px;
 }
 .keyboard-main-container .space-button-container:hover{
     background: #FFFFFF;
@@ -530,7 +536,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
@@ -545,10 +551,8 @@ border: none;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 border-radius: 2px;
 margin-right: 5px;
-padding-top: 15px;
-padding-bottom:15px ;
-padding-right: 15px;
-padding-left: 15px;
+width: 20px;
+height: 20px;
 }
 .keyboard-main-container .command-button-container:hover{
 background: #FFFFFF;
@@ -574,7 +578,7 @@ justify-content: center;
 font-family: 'Mukta', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 18px;
 letter-spacing: 0.02em;
 
