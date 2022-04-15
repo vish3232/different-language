@@ -997,10 +997,12 @@ function HindiKeyboard() {
                       </div>
                       
                     </div>
-                    <div onClick={()=>{dispatch(concatCharacter(`${word+`${
-                          controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
-                      }
-                     `}`));setcapsLockEnable(false)}} className={selectedKey===`${    controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
+                    <div onClick={()=>{
+                      dispatch(concatCharacter(`${word+`${
+                        controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
+                    }`}`));setcapsLockEnable(false)
+                      
+                    }} className={selectedKey===`${    controlEnable?`${controlEnable?"६":"6"}`:`${capsLockEnable?"त्र":"6"}`
                      }`?"key-container key-container-active":"key-container"} >
                       <div className="key-content" >
                       {
