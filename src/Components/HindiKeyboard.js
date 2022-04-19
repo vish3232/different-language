@@ -15,6 +15,7 @@ function HindiKeyboard() {
   const [controlEnable, setcontrolEnable] = useState(false)
   const [isVirtual, setVirtual] = useState(false)
   const ref = useRef()
+  const element=useRef(null)
   const [cursor,setcursor]=useState(0)
   useEffect(() => {
     if (ref.current) {
@@ -680,7 +681,7 @@ function HindiKeyboard() {
                     dispatch(concatCharacter(`${word + "झ"}`))
                   }
                 } else if (e.key === "Delete" || e.key === "Backspace") {
-                  dispatch(concatCharacter(word.substring(0, cursor - 1) + word.substring(cursor, word.length)))
+                  dispatch(concatCharacter(word.substring(0, cursor - 1) + word.substring(cursor, word.length)));
                   dispatch(currentKey("delete"))
 
                 } else if (e.key === "{") {
@@ -869,6 +870,7 @@ function HindiKeyboard() {
     <div>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }} >
         <textarea
+        ref={element}
         onSelect={(e)=>{setcursor(e.target.selectionStart)}}
           onKeyDown={(e) => { HindiKeyboardPress(e) }}
           value={word} placeholder="search" type="text" className="search-input" />
@@ -1092,7 +1094,8 @@ function HindiKeyboard() {
                   </div>
 
                 </div>
-                <div onClick={() => { dispatch(concatCharacter(word.slice(0, word.length - 1))); setcapsLockEnable(false) }} className={selectedKey === "delete" ? "delete-button-container-selected delete-button-container" : "delete-button-container"} >
+                <div onClick={() => {  dispatch(concatCharacter(word.substring(0, cursor - 1) + word.substring(cursor, word.length)))
+                  setcapsLockEnable(false) }} className={selectedKey === "delete" ? "delete-button-container-selected delete-button-container" : "delete-button-container"} >
                   <div className="delete-header" >
                     delete
                   </div>

@@ -1017,7 +1017,8 @@ function EnglishKeyboard() {
                 </div>
 
               </div>
-              <div onClick={() => { dispatch(concatCharacter(word.slice(0, word.length - 1))); dispatch(currentKey("")) }} className={selectedKey === "delete" ? "delete-button-container-selected delete-button-container" : "delete-button-container"} >
+              <div onClick={() => { dispatch(concatCharacter(word.substring(0, cursor - 1) + word.substring(cursor, word.length)))
+                 dispatch(currentKey("")) }} className={selectedKey === "delete" ? "delete-button-container-selected delete-button-container" : "delete-button-container"} >
                 <div className="delete-header" >
                   delete
                 </div>
